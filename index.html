@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ionify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ionify</h1>
+        <p>Change the H⁺ or OH⁻ ion concentration.</p>
+        <div class="controls">
+            <div class="box">
+                <h2>H⁺ Ions</h2>
+                <div class="slider-controls">
+                    <button id="hMinus" type="button">−</button>
+                    <input
+                        type="range"
+                        id="hSlider"
+                        min="1"
+                        max="14"
+                        step="0.1"
+                        value="7"
+                    >
+                    <button id="hPlus" type="button">+</button>
+                </div>
+                <p>
+                    pH:
+                    <input
+                        type="number"
+                        id="hInput"
+                        min="1"
+                        max="14"
+                        step="0.1"
+                        value="7"
+                    >
+                </p>
+                <p>
+                    H⁺ concentration:
+                    <span id="hValue">1 × 10⁻⁷</span> M
+                </p>
+            </div>
+            <div class="box">
+                <h2>OH⁻ Ions</h2>
+                <div class="slider-controls">
+                    <button id="ohMinus" type="button">−</button>
+                    <input
+                        type="range"
+                        id="ohSlider"
+                        min="1"
+                        max="14"
+                        step="0.1"
+                        value="7"
+                    >
+                    <button id="ohPlus" type="button">+</button>
+                </div>
+                <p>
+                    pOH:
+                    <input
+                        type="number"
+                        id="ohInput"
+                        min="1"
+                        max="14"
+                        step="0.1"
+                        value="7"
+                    >
+                </p>
+                <p>
+                    OH⁻ concentration:
+                    <span id="ohValue">1 × 10⁻⁷</span> M
+                </p>
+            </div>
+        </div>
+        <div class="actions">
+            <button id="undoBtn" type="button">↶ Undo</button>
+            <button id="redoBtn" type="button">↷ Redo</button>
+            <button id="resetBtn" type="button">Reset</button>
+        </div>
+        <div class="result">
+            <h2>pH</h2>
+            <div id="phNumber">7.0</div>
+            <div class="scale">
+                <div class="numbers">
+                    <span>0</span>
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                    <span>11</span>
+                    <span>12</span>
+                    <span>13</span>
+                    <span>14</span>
+                </div>
+                <div class="bar"></div>
+                <div id="marker"></div>
+            </div>
+            <h3 id="type">Neutral</h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
